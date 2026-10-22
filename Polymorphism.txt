@@ -1,0 +1,51 @@
+# What is Polymorphism
+
+- Poly means ‘Many’
+- Morphism means ‘Form / Behaviors’
+- polymorphism means having many Form / Behaviors.
+
+# For Example
+
+- + Operation is used for Addition of two integer
+
+  For Example:
+
+  10 + 20 = 30
+
+- it is also used for joining two Strings.
+
+  For Example:
+
+  “Spider” + “man” = Spiderman
+
+# Type of Polymorphism
+
+There are two type of Polymorphism
+
+- Compile time polymorphism / Static polymorphism
+- Run time polymorphism / Dynamic polymorphism
+
+# Type of Polymorphism
+
+There are two type of Polymorphism
+
+- Compile time polymorphism achieved using Method Overloading
+- Run time polymorphism achieved using Method Overriding
+
+# Method Overloading
+
+- According to Method Overloading Class can have Multiple methods having same name.
+
+# Conditions Method Overloading
+
+- All the Methods should have Same Name
+- All the Methods should be in Same Class
+- But the Methods should have Different parameters
+
+  - Different Type of parameters
+  - Different Numbers of parameters
+  - Different Sequence of parameters
+
+# Method Overriding
+
+- With Method Overriding , We can override the Method of parent class with same method of child Class
