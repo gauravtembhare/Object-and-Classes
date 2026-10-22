@@ -1,0 +1,183 @@
+# C# Constructors Examples
+
+This repository contains beginner-friendly C# examples based on notes from a constructor tutorial.
+
+## Topics Covered
+
+- What a constructor is
+- Constructor naming rules
+- Constructors do not have a return type (not even `void`)
+- Access modifiers on constructors
+- When a constructor runs
+- Parameterless constructor
+- Compiler-provided default constructor
+- User-defined constructor
+- Parameterized constructor
+- Initializing fields through a constructor
+- Constructor overloading
+
+## 1. What Is a Constructor?
+
+A constructor is a special class member that runs when an instance of a class is created. It is commonly used to initialize the object's data.
+
+### Key properties
+
+- A constructor has the same name as its class.
+- A constructor has no return type—not even `void`.
+- A constructor can use access modifiers such as `public` and `private`, subject to C# rules.
+- An instance constructor runs when an object is created with `new`.
+- Constructors are commonly used to initialize fields and properties.
+
+Example:
+
+```csharp
+class ProgramExample
+{
+    public ProgramExample()
+    {
+        Console.WriteLine("Hello, I am a constructor!");
+    }
+}
+
+// Creating the object runs the constructor.
+ProgramExample example = new ProgramExample();
+```
+
+Output:
+
+```text
+Hello, I am a constructor!
+```
+
+You do not call an instance constructor like an ordinary method. It runs as part of object creation.
+
+## 2. Default / Parameterless Constructor
+
+A parameterless constructor takes no parameters.
+
+If you do not declare any instance constructor in a class, C# provides an implicit public? No—its accessibility is the same as the class's default constructor rules; in ordinary classes, the compiler-generated parameterless constructor has the same accessibility as the class. If you declare any instance constructor yourself, the compiler does not automatically add that parameterless constructor.
+
+```csharp
+class Car
+{
+    public string Model;
+    public int Year;
+}
+
+// The compiler supplies a parameterless constructor because none was declared.
+Car car = new Car();
+```
+
+## 3. User-Defined Constructor
+
+A constructor written by the programmer is a user-defined constructor. It can be parameterless or parameterized.
+
+```csharp
+class ProgramExample
+{
+    public ProgramExample()
+    {
+        Console.WriteLine("Hello, I am a constructor!");
+    }
+}
+```
+
+## 4. Parameterized Constructor
+
+A parameterized constructor accepts values and can use them to initialize the object.
+
+```csharp
+class Car
+{
+    public string Model;
+    public int Year;
+
+    public Car(string model, int year)
+    {
+        Model = model;
+        Year = year;
+    }
+}
+
+Car myCar = new Car("Mustang", 1969);
+Console.WriteLine(myCar.Model); // Mustang
+Console.WriteLine(myCar.Year);  // 1969
+```
+
+The constructor avoids having to assign the fields separately after creating each object.
+
+## 5. Constructor Overloading
+
+A class can have multiple constructors with the same name, provided their parameter lists differ.
+
+The parameter lists can differ by:
+- Number of parameters
+- Parameter types
+- Sequence of parameter types
+
+Example:
+
+```csharp
+class Car
+{
+    public string Model;
+    public int Year;
+
+    public Car(string model, int year)
+    {
+        Model = model;
+        Year = year;
+    }
+
+    public Car(int year, string model)
+    {
+        Model = model;
+        Year = year;
+    }
+}
+
+Car firstCar = new Car("Mustang", 1969);
+Car secondCar = new Car(1967, "Impala");
+```
+
+C# selects the matching constructor based on the arguments supplied. Constructor overloading cannot be achieved by changing only parameter names or return type.
+
+## 6. Initialize Fields After Object Creation
+
+Fields can also be assigned after an object is created, if they are accessible:
+
+```csharp
+Car myCar = new Car("Mustang", 1969);
+myCar.Model = "Impala";
+myCar.Year = 1967;
+```
+
+For production code, properties are often preferred over public fields. Constructors are useful when an object should start with required values.
+
+## Run the Project
+
+Install the .NET SDK, then run:
+
+```bash
+dotnet new console -n CSharpConstructorsExamples
+cd CSharpConstructorsExamples
+```
+
+Replace the generated `Program.cs` with the `Program.cs` in this repository, then run:
+
+```bash
+dotnet run
+```
+
+## Repository Structure
+
+```text
+CSharp-Constructors-Examples/
+├── Program.cs
+├── README.md
+└── .gitignore
+```
+
+## Source
+
+These notes are reconstructed from the supplied constructor tutorial transcript. The code is a runnable learning example, not a verified copy of the instructor's original source code.
