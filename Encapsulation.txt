@@ -1,0 +1,11 @@
+Encapsulation
+
+=> The meaning of Encapsulation is "hiding sensitive data"
+=> Encapsulation in c# is a mechanism "wrapping the data(Variable) and code acting on the data(methods) together as single unit.
+
+
+How to Achive Encapsulation
+
+Encapsulation can be Achived in two steps
+=> Declare the variables of a class as private(data hiding)
+=> Provide Public setter and getter methods to modify and view the variable values.
