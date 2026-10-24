@@ -12,3 +12,4 @@ Encapsulation can be Achived in two steps
 
 C# Properties
 => A property is like a combination of a vairable and a method
+=> And it contains two methods: a get and set method.
