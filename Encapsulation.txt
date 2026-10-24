@@ -9,3 +9,6 @@ How to Achive Encapsulation
 Encapsulation can be Achived in two steps
 => Declare the variables of a class as private(data hiding)
 => Provide Public setter and getter methods to modify and view the variable values.
+
+C# Properties
+=> A property is like a combination of a vairable and a method
